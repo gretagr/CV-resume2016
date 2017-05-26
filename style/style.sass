@@ -2,7 +2,6 @@
 @import "main"
 @import "variables"
 @import "mixins"
-
 .main
   overflow: auto
   .left-content
@@ -16,6 +15,7 @@
     background: #f6f6f6
     height: 100vh
     overflow-y: auto
+    //----------------------------brakpoints
     @include smallH
       height: 100%
     @include tablet
@@ -26,6 +26,7 @@
     @include phone
       width: 100%
       height: 100%
+    //------------------------hide aside scrollbars in vebkit and ms
     &::-webkit-scrollbar
       display: none
     -ms-overflow-style: none
@@ -107,86 +108,26 @@
       color: white
       float: right
       width: 67%
+      // ---------------------------small height queries
       @include smallH
         align-items: flex-start
         padding-top: $mainpadding
-        .popup-image
-          display: none
-          height: 0
+      // ------------------------------small size queries
       @include xsTablet
         height: 100%
+        width: 100%
+        padding-top: $mainpadding
         background:
           image: url(../images/work.png)
           repeat: no-repeat
           size: 80% auto
-        .popup-image
-          display: none
-          height: 0
+          //----------------------------tablet size queries
       @include tablet
         width: 50%
-      @include xsTablet
-        width: 100%
-        height: 100%
-        padding-top: $mainpadding
-      .popup-image
-        z-index: 3
-        position: absolute
-        max-width: 100%
-        min-width: 100%
-        top: 0
-        right: 0
-        .wrapper
-          position: relative
-          min-width: 400px
-          min-height: 700px
-          @include tablet
-            max-width: 450px
-            max-height: 450px
-            min-width: 400px
-            min-height: 400px
-          #note
-            position: absolute
-            max-width: 25%
-            min-width: 192px
-            left: -10%
-            bottom: 20%
-            @include tablet
-              max-width: 22%
-              min-width: 192px
-              left: -10%
-              bottom: -30%
-          #ruler
-            position: absolute
-            top: 35%
-            left: 15%
-            max-width: 8%
-            min-width: 67px
-            @include tablet
-              top: 20%
-              left: 25%
-              max-width: 3%
-          #comp
-            position: absolute
-            right: 25%
-            top: 10%
-            max-width: 52%
-            min-width: 450px
-            @include tablet
-              top: 0
-              right: -15%
-              max-width: 45%
-              min-width: 350px
-          #cup
-            position: absolute
-            width: 90px
-            max-width: 20%
-            left: 28%
-            top: 38%
-            @include tablet
-              width: 65px
-              max-width: 20%
-              left: 45%
-              top: 35%
+        //----------------adding svg images
+      @include svg
+      //----------------hide svg img when there is no-room
+      @include hideImg
       .middle-content
         display: flex
         justify-content: flex-end
