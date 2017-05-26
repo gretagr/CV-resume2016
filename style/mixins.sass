@@ -1,0 +1,83 @@
+@mixin bigText
+  .bigText
+    height: 20px
+    font:
+      weight: 100
+      size: 175%
+    transition: font-size .25s linear
+  .bolder
+    font-weight: 300
+
+@mixin largeDesktop
+  @media #{$largeScreen}
+    @content
+
+@mixin desktop
+  @media #{$desktop}
+    @content
+
+@mixin tablet
+  @media #{$tablet}
+    @content
+
+@mixin xsTablet
+  @media #{$xsTablet}
+    @content
+
+@mixin phone
+  @media #{$phone}
+    @content
+
+@mixin smallH
+  @media #{$smallHeight}
+    @content
+
+@mixin hideImg
+  @media #{$imgHiding}
+    @content
+
+//@mixin xLarge
+    width: 100%
+    height: 100vh
+    #note
+      position: absolute
+      max-width: 23%
+      left: -10%
+      top: 60%
+    #ruler
+      position: absolute
+      top: 35%
+      left: 12%
+      max-width: 8%
+    #comp
+      position: absolute
+      right: 30%
+      top: 15%
+      max-width: 50%
+    #cup
+      position: absolute
+      width: 80px
+      max-width: 20%
+      left: 26%
+      top: 40%
+//@mixin smallH
+  @media screen and (max-height: 550px)
+    height: 100%
+    .popup-image
+      display: none
+      height: 0
+    .middle-content
+      height: 100%
+      box-sizing: border-box
+//@mixin small
+  @media screen and (max-width: 570px)
+    .left-content
+      height: 100%
+    #cup, #note, #comp, #ruler
+      display: none
+    .popup-image
+      display: none
+      height: 0
+    .middle-content
+      height: 100%
+      justify-content: center

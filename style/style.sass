@@ -1,0 +1,241 @@
+/*compile style.css*/
+@import "main"
+@import "variables"
+@import "mixins"
+
+.main
+  overflow: auto
+  .left-content
+    z-index: 0
+    width: 33%
+    transition: width .5s linear
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    min-width: 275px
+    background: #f6f6f6
+    height: 100vh
+    overflow-y: auto
+    @include smallH
+      height: 100%
+    @include tablet
+      width: 50%
+    @include xsTablet
+      width: 100%
+      height: 100%
+    @include phone
+      width: 100%
+      height: 100%
+    &::-webkit-scrollbar
+      display: none
+    -ms-overflow-style: none
+    .holder
+      padding-top: $mainpadding
+      margin-bottom: $mainpadding
+      display: flex
+      align-items: center
+      margin: 0 auto
+      flex-direction: column
+      flex-shrink: 0
+      max-width: 260px
+      min-height: 300px
+      .profile
+        max-width: 200px
+        max-height: 200px
+      .name
+        padding-top: $mainpadding
+        padding-bottom: $mainpadding * 2
+      @include bigText
+      .email
+        line-height: 13px
+        color: $accentColor
+        font:
+            weight: 300
+            size: 120%
+      .social
+        flex-direction: row
+        max-width: 60%
+        padding-top: $mainpadding
+        padding-bottom: $mainpadding
+        img
+          max-width: 45px
+          padding: 5px
+    .skills-box
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      flex-shrink: 0
+      padding-top: $mainpadding
+      padding-bottom: $mainpadding
+      height: 50%
+      max-width: 260px
+      margin: 0 auto
+      @include bigText
+      .skill
+        display: flex
+        flex-wrap: wrap
+        align-items: stretch
+        justify-content: space-around
+        margin: 0 auto
+        height: 100%
+        padding-top: $mainpadding
+        p
+          display: inline
+          width: 35%
+          padding-bottom: 2px
+        progress
+          border: 0
+          height: 1em
+          width: 65%
+          color: $mainColor
+          padding-bottom: 2px
+          &::-webkit-progress-bar
+            background: rgba(26, 188, 156, 0.2)
+            appearance: none
+          &::-webkit-progress-value
+            background: $mainColor
+          &::-moz-progress-bar
+            background: rgba(26, 188, 156, 1)
+          &::-moz-progress-value
+            background: $mainColor
+  .middle-box
+      display: flex
+      position: relative
+      justify-content: flex-end
+      align-items: flex-end
+      z-index: 3
+      color: white
+      float: right
+      width: 67%
+      @include smallH
+        align-items: flex-start
+        padding-top: $mainpadding
+        .popup-image
+          display: none
+          height: 0
+      @include xsTablet
+        height: 100%
+        background:
+          image: url(../images/work.png)
+          repeat: no-repeat
+          size: 80% auto
+        .popup-image
+          display: none
+          height: 0
+      @include tablet
+        width: 50%
+      @include xsTablet
+        width: 100%
+        height: 100%
+        padding-top: $mainpadding
+      .popup-image
+        z-index: 3
+        position: absolute
+        max-width: 100%
+        min-width: 100%
+        top: 0
+        right: 0
+        .wrapper
+          position: relative
+          min-width: 400px
+          min-height: 700px
+          @include tablet
+            max-width: 450px
+            max-height: 450px
+            min-width: 400px
+            min-height: 400px
+          #note
+            position: absolute
+            max-width: 25%
+            min-width: 192px
+            left: -10%
+            bottom: 20%
+            @include tablet
+              max-width: 22%
+              min-width: 192px
+              left: -10%
+              bottom: -30%
+          #ruler
+            position: absolute
+            top: 35%
+            left: 15%
+            max-width: 8%
+            min-width: 67px
+            @include tablet
+              top: 20%
+              left: 25%
+              max-width: 3%
+          #comp
+            position: absolute
+            right: 25%
+            top: 10%
+            max-width: 52%
+            min-width: 450px
+            @include tablet
+              top: 0
+              right: -15%
+              max-width: 45%
+              min-width: 350px
+          #cup
+            position: absolute
+            width: 90px
+            max-width: 20%
+            left: 28%
+            top: 38%
+            @include tablet
+              width: 65px
+              max-width: 20%
+              left: 45%
+              top: 35%
+      .middle-content
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        padding-bottom: $mainpadding
+        padding-right: $mainpadding
+        @include xsTablet
+          height: 100%
+        @include phone
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          justify-content: flex-start
+          height: 100%
+          width: 100%
+          padding-top: $mainpadding
+        @include tablet
+          h4
+            font-size: 110%
+        .headers
+          padding-right: $mainpadding
+          padding-left: $mainpadding
+          padding-bottom: 5px
+          @include smallH
+            padding-top: 5px
+          @include tablet
+            .bigText
+              font-size: 125%
+          @include phone
+            display: flex
+            width: 100%
+            align-items: flex-start
+            flex-direction: column
+            padding: $mainpadding 0
+        .texts
+        @include bigText
+        @include phone
+          padding-left: $mainpadding
+        .sm
+          letter-spacing: 1px
+        .desc
+          max-height: 100%
+          padding-left: $mainpadding
+          @include phone
+            width: 100%
+            padding-left: $mainpadding
+        .work
+          border-left: 4px solid $accentColor
+        .learn
+          border-left: 4px solid #F1AF16
+        .additional
+          border-left: 4px solid #183F5F
