@@ -64,7 +64,7 @@ p {
   }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 579px) and (min-width: 0) {
   .main .left-content {
     width: 100%;
     height: 100%;
@@ -207,36 +207,22 @@ p {
     align-items: flex-start;
     padding-top: 20px;
   }
-  .main .middle-box .popup-image {
-    display: none;
-    height: 0;
-  }
 }
 
 @media (min-width: 580px) and (max-width: 949px) {
   .main .middle-box {
     height: 100%;
+    width: 100%;
+    padding-top: 20px;
     background-image: url(../images/work.png);
     background-repeat: no-repeat;
     background-size: 80% auto;
-  }
-  .main .middle-box .popup-image {
-    display: none;
-    height: 0;
   }
 }
 
 @media (min-width: 950px) and (max-width: 1099px) {
   .main .middle-box {
     width: 50%;
-  }
-}
-
-@media (min-width: 580px) and (max-width: 949px) {
-  .main .middle-box {
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
   }
 }
 
@@ -331,6 +317,27 @@ p {
   }
 }
 
+@media (max-width: 579px) and (min-width: 0) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 949px) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (max-height: 450px) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
 .main .middle-box .middle-content {
   display: flex;
   justify-content: flex-end;
@@ -345,7 +352,7 @@ p {
   }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 579px) and (min-width: 0) {
   .main .middle-box .middle-content {
     display: flex;
     flex-direction: column;
@@ -381,7 +388,7 @@ p {
   }
 }
 
-@media (max-width: 579px) {
+@media (max-width: 579px) and (min-width: 0) {
   .main .middle-box .middle-content .headers {
     display: flex;
     width: 100%;
@@ -402,7 +409,7 @@ p {
   font-weight: 300;
 }
 
-@media (max-width: 579px) {
+@media (max-width: 579px) and (min-width: 0) {
   .main .middle-box .middle-content {
     padding-left: 20px;
   }
@@ -417,7 +424,7 @@ p {
   padding-left: 20px;
 }
 
-@media (max-width: 579px) {
+@media (max-width: 579px) and (min-width: 0) {
   .main .middle-box .middle-content .desc {
     width: 100%;
     padding-left: 20px;
