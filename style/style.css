@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   width: 100%;
+  color: #3d3d3d;
 }
 
 h4 {
@@ -27,47 +28,51 @@ p {
   background-color: #1abc9c;
 }
 
-.main {
-  overflow: auto;
+@media (max-height: 760px) and (max-width: 1099px) {
+  .main .popup-image {
+    display: none;
+    height: 0;
+  }
 }
 
 .main .left-content {
-  z-index: 0;
-  width: 33%;
-  transition: width .5s linear;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  width: 33%;
   min-width: 275px;
-  background: #f6f6f6;
   height: 100vh;
-  overflow-y: auto;
+  transition: width .5s linear;
+  background: #f6f6f6;
+  z-index: 0;
+  overflow: auto;
   -ms-overflow-style: none;
 }
 
 @media (max-height: 450px) {
   .main .left-content {
-    height: 100%;
+    height: 100vh;
   }
 }
 
 @media (min-width: 950px) and (max-width: 1099px) {
   .main .left-content {
     width: 50%;
+    height: 100vh;
   }
 }
 
 @media (min-width: 580px) and (max-width: 949px) {
   .main .left-content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 }
 
 @media (max-width: 579px) and (min-width: 0) {
   .main .left-content {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 }
 
@@ -76,20 +81,29 @@ p {
 }
 
 .main .left-content .holder {
-  padding-top: 20px;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
   flex-direction: column;
   flex-shrink: 0;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
   max-width: 260px;
   min-height: 300px;
 }
 
 .main .left-content .holder .profile {
-  max-width: 200px;
-  max-height: 200px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  padding-top: 20px;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.main .left-content .holder .profile img {
+  display: flex;
+  max-width: 100%;
 }
 
 .main .left-content .holder .name {
@@ -116,8 +130,10 @@ p {
 }
 
 .main .left-content .holder .social {
+  display: flex;
   flex-direction: row;
-  max-width: 60%;
+  max-width: 90%;
+  height: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -125,6 +141,13 @@ p {
 .main .left-content .holder .social img {
   max-width: 45px;
   padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.main .left-content .holder .social img:hover {
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
 }
 
 .main .left-content .skills-box {
@@ -134,9 +157,9 @@ p {
   flex-shrink: 0;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin: 0 auto;
   height: 50%;
   max-width: 260px;
-  margin: 0 auto;
 }
 
 .main .left-content .skills-box .bigText {
@@ -163,7 +186,7 @@ p {
 .main .left-content .skills-box .skill p {
   display: inline;
   width: 35%;
-  padding-bottom: 2px;
+  font-size: 90%;
 }
 
 .main .left-content .skills-box .skill progress {
@@ -171,7 +194,7 @@ p {
   height: 1em;
   width: 65%;
   color: #1abc9c;
-  padding-bottom: 2px;
+  margin-top: 3px;
 }
 
 .main .left-content .skills-box .skill progress::-webkit-progress-bar {
@@ -193,12 +216,12 @@ p {
 
 .main .middle-box {
   display: flex;
-  position: relative;
   justify-content: flex-end;
   align-items: flex-end;
+  position: relative;
   z-index: 3;
-  color: white;
   float: right;
+  color: #f6f6f6;
   width: 67%;
 }
 
@@ -217,6 +240,14 @@ p {
     background-image: url(../images/work.png);
     background-repeat: no-repeat;
     background-size: 80% auto;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1099px) {
+  .main .middle-box {
+    background-image: url(../images/work.png);
+    background-repeat: no-repeat;
+    background-size: 120% auto;
   }
 }
 
@@ -241,45 +272,25 @@ p {
   min-height: 700px;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper {
-    max-width: 450px;
-    max-height: 450px;
-    min-width: 400px;
-    min-height: 400px;
-  }
-}
-
 .main .middle-box .popup-image .wrapper #note {
   position: absolute;
-  max-width: 25%;
-  min-width: 192px;
+  max-width: 20%;
+  min-width: 170px;
   left: -10%;
-  bottom: 20%;
-}
-
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper #note {
-    max-width: 22%;
-    min-width: 192px;
-    left: -10%;
-    bottom: -30%;
-  }
+  bottom: 5%;
 }
 
 .main .middle-box .popup-image .wrapper #ruler {
   position: absolute;
-  top: 35%;
-  left: 15%;
-  max-width: 8%;
+  top: 40%;
+  left: 19%;
+  max-width: 7%;
   min-width: 67px;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
+@media (max-width: 1550px) {
   .main .middle-box .popup-image .wrapper #ruler {
-    top: 20%;
-    left: 25%;
-    max-width: 3%;
+    display: none;
   }
 }
 
@@ -291,33 +302,28 @@ p {
   min-width: 450px;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper #comp {
-    top: 0;
-    right: -15%;
-    max-width: 45%;
-    min-width: 350px;
-  }
-}
-
 .main .middle-box .popup-image .wrapper #cup {
   position: absolute;
-  width: 90px;
   max-width: 20%;
-  left: 28%;
-  top: 38%;
+  left: 30%;
+  top: 43%;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
+@media (max-width: 1400px) {
   .main .middle-box .popup-image .wrapper #cup {
-    width: 65px;
-    max-width: 20%;
-    left: 45%;
     top: 35%;
+    left: 25%;
   }
 }
 
 @media (max-width: 579px) and (min-width: 0) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1099px) {
   .main .middle-box .popup-image {
     display: none;
     height: 0;
@@ -391,9 +397,9 @@ p {
 @media (max-width: 579px) and (min-width: 0) {
   .main .middle-box .middle-content .headers {
     display: flex;
-    width: 100%;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
     padding: 20px 0;
   }
 }

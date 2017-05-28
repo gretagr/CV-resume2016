@@ -10,25 +10,26 @@ head
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500")
 body
-  section.main
-    aside.left-content
+  main.main
+    section.left-content
       .holder
-        img.profile(src="images/profile.png")
-        p.bigText.name GRETA
-          span.bolder GRIGELIONYTĖ
+        .profile
+          img(src="images/profile.png", alt="profile image")
+        h1.bigText.name GRETA
+          strong.bolder GRIGELIONYTĖ
         p.email greta.grigelionyte@gmail.com
         p.email Mob. + 370 655 66 101
         .social
           a(href="https://www.linkedin.com/in/greta-grigelionytė-381bab98", target="_blank")
-            img(src="images/linkedin.png")
+            img(src="images/linkedin.png", alt="link to linkedin")
           a(href="https://github.com/gretagr", target="_blank")
-            img(src="images/github.png")
+            img(src="images/github.png", alt="link to github")
           // nothing to show yet
           a(href="#") 
-            img(src="images/behance.png")
+            img(src="images/behance.png", alt="link to behance")
       .skills-box
-        p.bigText KOMPIUTERINĖS
-          span.bolder ŽINIOS
+        h1.bigText KOMPIUTERINĖS
+          strong.bolder ŽINIOS
         .skill
           p HTML5
           progress(value="80", max="100")              
@@ -57,9 +58,9 @@ body
           p Adobe Ai
           progress(value="100", max="100")
     section.middle-box
-      section.popup-image
+      .popup-image
         .wrapper
-          svg#cup(viewbox='0 0 100 100')
+          svg#cup(viewbox='0 0 110 110')
             path(fill='#7D7D7D', d='M88.1 36.5c-1.7-4.2-4.1-8.1-6.9-11.4 2.3 3.5 4.1 7.5 5.2 11.7l1.7-.3zM100 45.1l-.6-3.1c-.1-.6-.5-1.2-1.1-1.7-.6-.4-1.2-.5-1.8-.4l.1.8c.1.6 0 1.3-.4 1.9-.4.6-1 .9-1.7 1.1L87.8 45C89.3 66.2 74.5 85.7 53 89.5c-4.3.8-8.6.8-12.7.3h.1c-10.3-1.3-19.7-6.4-26.4-14l.1.1c.4.6.9 1.2 1.3 1.8.2.2.3.5.5.7.5.7 1.1 1.3 1.7 2 .2.3.4.5.7.7l1.6 1.6c.3.3.6.5.8.8.5.5 1 .9 1.6 1.4.3.2.6.5.8.7.6.5 1.3 1 2 1.5l.9.6c.5.3 1 .6 1.6.9.3.2.7.4 1.1.6.6.3 1.3.7 1.9 1 .3.2.7.3 1.1.5.6.3 1.3.6 2 .9.4.2.9.3 1.2.5.5.2 1.1.4 1.6.5.4.1.8.3 1.2.3.8.2 1.5.4 2.3.6l1.2.3c.6.1 1.2.2 1.7.3.3 0 .6.1.9.1 4.1.5 8.4.4 12.7-.3C78 90.1 92.8 70.6 91.2 49.3l6.8-1.2c.6-.1 1.2-.5 1.7-1.1.3-.5.4-1.2.3-1.9z')
             path(fill='#E44E3D', d='M38.4 6.5c11.6-2.1 23 .9 31.9 7.2-4.1-.5-8.4-.5-12.7.3-2.8.5-5.5 1.3-8.1 2.3 12.6 1.5 23 10.4 26.7 22.3l10.1-1.8c-1.2-4.2-2.9-8.2-5.2-11.7C72.2 11.3 55.6 3.4 38.4 6.5 18 10.1 3.6 27.8 3.6 47.9 3.6 27.8 18 10.1 38.4 6.5zM77.7 48.2c0 17.7-14.4 32.1-32.1 32.1-6.8 0-13.2-2.1-18.4-5.8 3.1 6.2 7.6 11.4 13.1 15.3 4.1.5 8.4.5 12.7-.3C74.5 85.7 89.3 66.2 87.8 45l-10.1 1.8v1.4z')
             path(fill='#E96C63', d='M40.4 89.8s-.1 0 0 0c-5.5-4-10.1-9.2-13.2-15.4-8.3-5.7-13.7-15.4-13.7-26.2 0-17.7 14.4-32.1 32.1-32.1 1.3 0 2.6.1 3.9.2 2.6-1 5.3-1.8 8.1-2.3 4.3-.8 8.6-.8 12.7-.3C61.4 7.4 50 4.4 38.4 6.5 18 10.1 3.6 27.8 3.6 47.9c0 2.5.2 5 .6 7.5 1.4 7.9 4.9 14.9 9.8 20.5 6.7 7.6 16.1 12.6 26.4 13.9z')
@@ -143,11 +144,11 @@ body
             path(fill='#B9B9BA', d='M107.1 42.3c0-5.6 4.4-9.3 9.8-8.4 5.4 1 9.8 6.3 9.8 11.8 0 5.6-4.4 9.3-9.8 8.4-5.4-1-9.8-6.3-9.8-11.8z', clip-path='url(#b)')
       .middle-content
         .headers
-          p.bigText DARBO
-            span.bolder.sm PATIRTIS
+          h1.bigText DARBO
+            strong.bolder.sm PATIRTIS
           p.bigText.bolder.kvalifikacijos KVALIFIKACIJOS
           p.bigText.papildoma PAPILDOMA
-            span.bolder INFO
+            strong.bolder INFO
         .texts
           .desc.work
             h4 Laisvai samdoma Grafikos dizainerė
