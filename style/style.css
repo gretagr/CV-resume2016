@@ -28,27 +28,6 @@ p {
   background-color: #1abc9c;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
-  .popup-image {
-    display: none;
-    height: 0;
-  }
-}
-
-@media (min-width: 950px) and (max-width: 1099px) and (min-width: 580px) and (max-width: 949px) {
-  .popup-image {
-    display: none;
-    height: 0;
-  }
-}
-
-@media (min-width: 950px) and (max-width: 1099px) and (max-height: 450px) {
-  .popup-image {
-    display: none;
-    height: 0;
-  }
-}
-
 @media (max-height: 760px) and (max-width: 1099px) {
   .main .popup-image {
     display: none;
@@ -266,6 +245,14 @@ p {
 
 @media (min-width: 950px) and (max-width: 1099px) {
   .main .middle-box {
+    background-image: url(../images/work.png);
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1099px) {
+  .main .middle-box {
     width: 50%;
   }
 }
@@ -285,30 +272,12 @@ p {
   min-height: 700px;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper {
-    max-width: 450px;
-    max-height: 450px;
-    min-width: 400px;
-    min-height: 400px;
-  }
-}
-
 .main .middle-box .popup-image .wrapper #note {
   position: absolute;
   max-width: 20%;
   min-width: 170px;
   left: -10%;
   bottom: 5%;
-}
-
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper #note {
-    max-width: 22%;
-    min-width: 192px;
-    left: -10%;
-    bottom: -30%;
-  }
 }
 
 .main .middle-box .popup-image .wrapper #ruler {
@@ -333,15 +302,6 @@ p {
   min-width: 450px;
 }
 
-@media (min-width: 950px) and (max-width: 1099px) {
-  .main .middle-box .popup-image .wrapper #comp {
-    top: 0;
-    right: -15%;
-    max-width: 45%;
-    min-width: 350px;
-  }
-}
-
 .main .middle-box .popup-image .wrapper #cup {
   position: absolute;
   max-width: 20%;
@@ -357,6 +317,27 @@ p {
 }
 
 @media (max-width: 579px) and (min-width: 0) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1099px) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 949px) {
+  .main .middle-box .popup-image {
+    display: none;
+    height: 0;
+  }
+}
+
+@media (max-height: 450px) {
   .main .middle-box .popup-image {
     display: none;
     height: 0;
