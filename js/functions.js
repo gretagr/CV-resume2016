@@ -20,8 +20,4 @@ window.addEventListener("resize", imgSize, false);
  function imgSize(){
    "use strict";
     //window.location.reload();
-<<<<<<< HEAD
-=======
-
->>>>>>> 5de9e1be15c471b1dff5b7b7c029b1f24a1308fc
  };
