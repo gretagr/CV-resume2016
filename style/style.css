@@ -311,7 +311,8 @@ p {
 
 @media (max-width: 1400px) {
   .main .middle-box .popup-image .wrapper #cup {
-    top: 35%;
+    max-width: 20%;
+    top: 37%;
     left: 25%;
   }
 }
