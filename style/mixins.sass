@@ -7,6 +7,11 @@
     transition: font-size .25s linear
   .bolder
     font-weight: 300
+@mixin imgForMedium
+  @media (max-height: 760px) and (max-width: 1099px)
+    .popup-image
+      display: none
+      height: 0
 
 @mixin largeDesktop
   @media #{$largeScreen}
@@ -37,6 +42,10 @@
     .popup-image
       display: none
       height: 0
+@include tablet
+  .popup-image
+    display: none
+    height: 0
   @include xsTablet
     .popup-image
       display: none
@@ -50,8 +59,8 @@
   .popup-image
     z-index: 3
     position: absolute
-    max-width: 100%
-    min-width: 100%
+    max-width: $maxWidth
+    min-width: $maxWidth
     top: 0
     right: 0
     .wrapper
@@ -65,10 +74,10 @@
         min-height: 400px
       #note
         position: absolute
-        max-width: 25%
-        min-width: 192px
+        max-width: 20%
+        min-width: 170px
         left: -10%
-        bottom: 20%
+        bottom: 5%
         @include tablet
           max-width: 22%
           min-width: 192px
@@ -76,14 +85,12 @@
           bottom: -30%
       #ruler
         position: absolute
-        top: 35%
-        left: 15%
-        max-width: 8%
+        top: 40%
+        left: 19%
+        max-width: 7%
         min-width: 67px
-        @include tablet
-          top: 20%
-          left: 25%
-          max-width: 3%
+        @media (max-width: 1550px)
+          display: none
       #comp
         position: absolute
         right: 25%
@@ -97,12 +104,9 @@
           min-width: 350px
       #cup
         position: absolute
-        width: 90px
         max-width: 20%
-        left: 28%
-        top: 38%
-        @include tablet
-          width: 65px
-          max-width: 20%
-          left: 45%
+        left: 30%
+        top: 43%
+        @media (max-width: 1400px)
           top: 35%
+          left: 25%
